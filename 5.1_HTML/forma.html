@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My form</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Personal details</legend>
+      <label>Salutation</label> <br>
+      <select>
+        <option>None</option>
+        <option>None</option>
+        <option>None</option>
+      </select>
+      <p>
+        <label for="name">First name:</label>
+        <input type="text" id="name" name="name" maxlength="10" required onchange="checkName()">
+      </p>
+
+      <p>
+        <label for="lastname">Last name:</label>
+        <input type="text" name="lastname" placeholder="Ismini yoz">
+      </p>
+
+
+      <p>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" style="margin-left: 25px" name="gender">Female
+      </p>
+
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="example@example.uz">
+      </p>
+
+      <p>
+        <label for="birthday">Date of birth:</label>
+        <input type="date" name="birthday">
+      </p>
+
+      <p>
+        Address: <br>
+        <textarea cols="50" rows="5"></textarea>
+      </p>
+
+      <input type="submit">
+
+
+    </fieldset>
+  </form>
+
+  <script>
+    function checkName() {
+      var input_val = document.getElementById('name').value;
+      if (input_val.includes(' ')) {
+        alert('PROBEL yozilmasin');
+        document.getElementById('name').value = ''
+      }
+    }
+  </script>
+</body>
+</html>
