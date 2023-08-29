@@ -1,0 +1,57 @@
+What is Django?
+
+Why Django?
+	- fast development,
+	- fullstack,
+	- multifunctional,
+	- secure,
+	- dynamic: multithreading-async-multiprocessing,
+	- crossplatform
+
+Required skills:
+	- Python Basics,
+	- OOP
+	- CLI (pwd, cd, mkdir-rmdir, dir-ls, )
+
+Start Django:
+	- Install Python
+	- Install IDE: PyCharm, VS Code, ...
+	- Create folder for project & cd
+	- Create virtual environment: virtualenv, pipenv
+	- Activate venv
+	- show installed packages (in venv & outside venv)
+	- Install django (or any version)
+
+Start project:
+	- django-admin startporject project_name (recommend: config .)
+	- python manage.py runserver
+	- stop server
+	- deactivate venv
+	
+	- difference between project & app
+
+	- project folder structure
+		- manage.py
+		- config (or dir with projectname) files
+Start new app:
+	- python manage.py startapp app_name
+	- folder app_name
+	- register app (config.settings.INSTALLED_APPS)
+	- 
+	- MVT:
+		- web page structure: URL
+		- page:view (logics)
+		- template
+
+App logics:
+	- function based view
+	- views.py
+	- create HelloWorld view:
+		from django.http import HttpResponse
+		def HomePageView(request):
+			return HttpResponse('Hello world')
+	- create & set app_name.urls
+		from django.urls import path
+		from .views import ...
+		urlpatterns = [path('path/', ViewName, name='url_name')]
+	- register app url (config.urls.urlpatterns)

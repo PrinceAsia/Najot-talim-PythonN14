@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oylar</title>
+</head>
+<body>
+    {% for m in months %}
+        {% if forloop.counter == num %}
+            <p>{{ m }}</p>
+        {% endif %}
+    {% endfor %}
+    
+</body>
+</html>
